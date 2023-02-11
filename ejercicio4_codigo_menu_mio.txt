@@ -1,0 +1,35 @@
+/* Exercici 4 - MENÚ */
+nav.col-12 {
+    background: radial-gradient(circle, white, rgb(121,9,9)35%);
+}
+
+nav.col-12 ul {
+    margin-left: 10px;
+}
+
+nav.col-12 ul li a {
+    margin: 5px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+nav.col-12 ul li a:hover {
+    background-color: #ff5131;
+}
+
+nav.col-12 li:hover > ul {
+    display: block;
+}
+nav.col-12 a + ul {
+    display: none;
+}
+nav.col-12 li:hover > a {
+    text-decoration: none;
+}
+nav.col-12 a + ul > li {
+    display: block;
+}
+nav.col-12 ul li:nth-child(2) ul:nth-child(2) {
+    margin-top: 28px
+}
