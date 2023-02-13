@@ -22,6 +22,7 @@ body {
     font-family: 'Piedra';
     src: url(../../Piedra/Piedra-Regular.ttf);
 }
+
 h1.col-12 {
     font-family: 'Piedra';
     color: #d50000;
@@ -43,15 +44,34 @@ nav.col-12 ul {
     display: flex;
     flex-direction: row;
     text-decoration: none;
+
+}
+nav ul ul {
+    display: none;
+    position: absolute; 
+    top: 4px;
+}
+nav li {
+    display:inline-block;
+    margin: 0;
+    position: relative;
+}
+nav a {
+    display:inline-block;
+    text-decoration: none;
+}
+nav ul li:hover > ul {
+    display:inherit;
 }
 nav.col-12 ul li a {
-    font-family: 'Piedra', italic;
+    font-family: 'Piedra';
     margin: 5px;
     color: white;
     font-size: 1.2em;
     cursor: pointer;
+    padding: 5px 5px;
 }
-nav.col-12 ul li a:hover {
+nav.col-12 ul li:hover {
     background-color: #ff5131;
 }
 nav.col-12 li:hover > ul {
@@ -68,7 +88,14 @@ nav.col-12 a + ul > li {
 }
 nav.col-12 ul li:nth-child(2) ul:nth-child(2) {
     margin-top: 28px;
+    background-color: rgb(121,9,9);
 }
+nav.col-12 ul li:nth-child(2) ul:nth-child(2) li a {
+    padding: 12px 5px;
+    text-decoration: none;
+}
+
+
 
 /* Exercici 5 - SIDEBAR */ /*GRID*/ 
 aside.col-3 {
@@ -80,6 +107,14 @@ aside.col-3 > section {
     border-style: dashed;
     border-color: #7f8c8d;
     margin-bottom: 20px;
+}
+aside.col-3 > section > div > div {
+    font-family: 'Piedra';
+    color: white;
+    
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
 }
 
 main > div.row {
