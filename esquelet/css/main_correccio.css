@@ -23,7 +23,7 @@ body {
     src: url(../../Piedra/Piedra-Regular.ttf);
 }
 
-h1.col-12 {
+header > div.row > h1.col-12 {
     font-family: 'Piedra';
     color: #d50000;
     text-shadow: 10px 20px 30px white;
@@ -36,34 +36,33 @@ h1.col-12 {
 }
 
 /* Exercici 4 - MENÚ */
-nav.col-12 {
+header > div.row > nav.col-12 {
     background: radial-gradient(circle, white, rgb(121,9,9)35%);
 }
-nav.col-12 ul {
+header > div.row > nav.col-12 ul {
     margin-left: 10px;
     display: flex;
     flex-direction: row;
     text-decoration: none;
-
 }
-nav ul ul {
+header > div.row > nav ul ul {
     display: none;
     position: absolute; 
     top: 4px;
 }
-nav li {
+header > div.row > nav li {
     display:inline-block;
     margin: 0;
     position: relative;
 }
-nav a {
+header > div.row > nav a {
     display:inline-block;
     text-decoration: none;
 }
-nav ul li:hover > ul {
+header > div.row > nav ul li:hover > ul {
     display:inherit;
 }
-nav.col-12 ul li a {
+header > div.row > nav.col-12 ul li a {
     font-family: 'Piedra';
     margin: 5px;
     color: white;
@@ -71,44 +70,47 @@ nav.col-12 ul li a {
     cursor: pointer;
     padding: 5px 5px;
 }
-nav.col-12 ul li:hover {
+header > div.row > nav.col-12 ul li:hover {
     background-color: #ff5131;
 }
-nav.col-12 li:hover > ul {
+header > div.row > nav.col-12 li:hover > ul {
     display: block;
 }
-nav.col-12 a + ul {
+header > div.row > nav.col-12 a + ul {
     display: none;
 }
-nav.col-12 li:hover > a {
+header > div.row > nav.col-12 li:hover > a {
     text-decoration: none;
 }
-nav.col-12 a + ul > li {
+header > div.row > nav.col-12 a + ul > li {
     display: block;
 }
-nav.col-12 ul li:nth-child(2) ul:nth-child(2) {
+header > div.row > nav.col-12 ul li:nth-child(2) ul:nth-child(2) {
     margin-top: 28px;
     background-color: rgb(121,9,9);
 }
-nav.col-12 ul li:nth-child(2) ul:nth-child(2) li a {
+header > div.row > nav.col-12 ul li:nth-child(2) ul:nth-child(2) li a {
     padding: 12px 5px;
     text-decoration: none;
 }
 
-
-
-/* Exercici 5 - SIDEBAR */ /*GRID*/ 
-aside.col-3 {
+/* Exercici 5 - SIDEBAR */
+main > div.row {
+    display: grid;
+    grid-template-columns: 450px auto auto;
+}
+main > div.row > aside.col-3 {
+    grid-column: 1 / 2;
     background-color: rgb(121,9,9);
     padding: 30px;
 }
-aside.col-3 > section {
+main > div.row > aside.col-3 > section {
     border: 5px solid;
     border-style: dashed;
     border-color: #7f8c8d;
     margin-bottom: 20px;
 }
-aside.col-3 > section > div > div {
+main > div.row > aside.col-3 > section > div > div {
     font-family: 'Piedra';
     color: white;
     
@@ -117,27 +119,37 @@ aside.col-3 > section > div > div {
     padding-left: 28px;
 }
 
-main > div.row {
-    display: grid;
-    grid-template-columns: 550px auto auto;
-}
-main > div.row > section#container > div#gallery > article > h3 {
-    display: none;
-}
-main > div.row > section#container > div#gallery > article > img {
-    width: 635px;
-    height: 535px;
-}
-
-main > div.row > aside.col-3 {
-    grid-column: 1 / 2;
-}
 main > div.row > aside.col-3 > section:nth-child(1) > div {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     height: 250px;
 }
+main > div.row > aside.col-3 > section:nth-child(2) > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    height: 250px;
+}
+main > div.row > aside.col-3 > section:nth-child(3) > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    height: 170px;
+}
+main > div.row > aside.col-3 > section:nth-child(4) > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto ;
+    height: 170px;
+}
+main > div.row > aside.col-3 > section:nth-child(5) > div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto ;
+    height: 170px;
+}
+
 main > div.row > aside.col-3 > section > div > div:nth-child(1) {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
@@ -173,34 +185,11 @@ main > div.row > aside.col-3 > section > div > div:nth-child(5) {
     background-size: cover;
     background-position: center;
 }
-main > div.row > aside.col-3 > section:nth-child(2) > div {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    height: 250px;
-}
-main > div.row > aside.col-3 > section:nth-child(3) > div {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    height: 170px;
-}
-main > div.row > aside.col-3 > section:nth-child(4) > div {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto ;
-    height: 170px;
-}
-main > div.row > aside.col-3 > section:nth-child(5) > div {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto ;
-    height: 170px;
-}
 
 /* Exercici 6 - CONTAINER */ /*FLEX*/
-section#container > div#gallery {
+main > div.row > section#container > div#gallery {
     background-color: #9b0000;
+    padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 40px;
     padding-left: 40px;
@@ -209,9 +198,17 @@ section#container > div#gallery {
     flex-wrap: wrap;
 }
 
-section#container > div#gallery > article > img {
+main > div.row > section#container > div#gallery > article > img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+}
+
+main > div.row > section#container > div#gallery > article > h3 {
+    display: none;
+}
+main > div.row > section#container > div#gallery > article > img {
+    width: 680px;
+    height: 580px;
 }
 
 @keyframes vuelta {
@@ -225,8 +222,7 @@ section#container > div#gallery > article > img {
       transform: scaleX(1);
     }
 }
-section#container > div#gallery > article {
-    background-image: url(long-dachshund-dog-cartoon-vector-1116614.jpg);
+main > div.row > section#container > div#gallery > article {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,3 +243,11 @@ main > div.col-12:hover {
 }
 
 /* Exercici 3 - LAYOUT RESPONSIVE */
+@media only screen and (max-width: 680px){
+    aside {
+        display: none;
+    }
+    body > header {
+        display: block;
+    }
+}
