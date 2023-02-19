@@ -243,12 +243,9 @@ main > div.col-12:hover {
 }
 
 /* Exercici 3 - LAYOUT RESPONSIVE */
-
 @media only screen and (max-width: 680px){
     
-    
-
-/*EJERCICIO 6*/
+    /*de ejercicio 6*/
     main > div.row > section#container > div#gallery {
         background-color: #9b0000;
         padding-top: 20px;
@@ -303,8 +300,7 @@ main > div.col-12:hover {
         animation: vuelta 5s linear infinite;
     }
     
-
-/*EJERCICIO 5*/
+    /*de ejercicio 5*/
     main > div.row {
         display: grid;
         grid-template-columns: auto;
